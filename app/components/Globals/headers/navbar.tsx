@@ -1,10 +1,10 @@
 // @flow
 import * as React from 'react';
 
-export function __Navbar() {
+export function Header() {
     return (
-        <nav>
-            Navbar
-        </nav>
+        <header>
+            
+        </header>
     );
 }

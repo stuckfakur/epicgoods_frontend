@@ -76,8 +76,8 @@ select{
 .centerMenu{
 	display: flex;
 }
-.flex_wrapp{
-	flex-wrap: normal;
+.flex_wrap{
+	flex-wrap: wrap;
 }
 @media screen and (max-width:900px){
 	.containerContent{

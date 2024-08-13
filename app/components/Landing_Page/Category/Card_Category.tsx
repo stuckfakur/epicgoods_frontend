@@ -29,7 +29,7 @@ export default function RekomKategories(props: Props) {
             <div style={{padding:'20px',display:'flex',gap:'10px',justifyContent:'space-around',fontWeight:'bold',overflow:'auto'}}>
                 {
                     dataKategories.map((item,index)=>(
-                        <a href="/category/">
+                        <a href="/category/" key={index}>
                             <div style={{display:'flex',justifyContent:'center',flexDirection:'column',alignItems:'center'}}>
                                 <div style={{width:'150px',height:'150px',background:'whitesmoke',borderRadius:'50%'}}>
                                     <img src={item.thumbnail} className="fitImage"/>

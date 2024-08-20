@@ -50,7 +50,7 @@ export default function _HeaderButtonProfile() {
     }, [])
 
     useEffect(() => {
-        const host = process.env.NEXT_PUBLIC_API_HOST
+        const host = process.env.NEXT_PUBLIC_HOST
         const refreshToken = async () => {
             try {
                 const res = await axios.post(`${host}/auth/refresh`, {}, {

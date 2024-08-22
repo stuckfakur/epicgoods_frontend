@@ -1,230 +1,74 @@
+"use client"
 // @flow
 import * as React from 'react';
-<<<<<<< Updated upstream
-import ProductItems from './Item_Product.tsx';
-
-import './style.css';
-=======
 import {useEffect, useState} from 'react';
 
 import './style.css';
 import axios from "axios";
 import _ItemProduct from "@/app/product/components/Item_Product";
->>>>>>> Stashed changes
 
-
-const dataProducts = [
-    {
-        title:'Thinkpad latop original',
-        price:'Rp. 100.000.00',
-        price_old:'Rp. 100.000.00',
-        thumbnail:'/samplelaptop.png',
-        rating_point:'4.6',
-        sellout:'1Rb',
-        market:{
-            address:'/market/alexandria_store',
-            name:'Alexandria Store'
-        },
-        product_link:'/product/details'
-    },
-    {
-        title:'Thinkpad latop original',
-        price:'Rp. 100.000.00',
-        price_old:'Rp. 100.000.00',
-        thumbnail:'/samplelaptop.png',
-        rating_point:'4.6',
-        sellout:'1Rb',
-        market:{
-            address:'/market/alexandria_store',
-            name:'Alexandria Store'
-        },
-        product_link:'/product/details'
-    },
-    {
-        title:'Thinkpad latop original',
-        price:'Rp. 100.000.00',
-        price_old:'Rp. 100.000.00',
-        thumbnail:'/samplelaptop.png',
-        rating_point:'4.6',
-        sellout:'1Rb',
-        market:{
-            address:'/market/alexandria_store',
-            name:'Alexandria Store'
-        },
-        product_link:'/product/details'
-    },
-    {
-        title:'Thinkpad latop original',
-        price:'Rp. 100.000.00',
-        price_old:'Rp. 100.000.00',
-        thumbnail:'/samplelaptop.png',
-        rating_point:'4.6',
-        sellout:'1Rb',
-        market:{
-            address:'/market/alexandria_store',
-            name:'Alexandria Store'
-        },
-        product_link:'/product/details'
-    },
-    {
-        title:'Thinkpad latop original',
-        price:'Rp. 100.000.00',
-        price_old:'Rp. 100.000.00',
-        thumbnail:'/samplelaptop.png',
-        rating_point:'4.6',
-        sellout:'1Rb',
-        market:{
-            address:'/market/alexandria_store',
-            name:'Alexandria Store'
-        },
-        product_link:'/product/details'
-    },
-    {
-        title:'Thinkpad latop original',
-        price:'Rp. 100.000.00',
-        price_old:'Rp. 100.000.00',
-        thumbnail:'/samplelaptop.png',
-        rating_point:'4.6',
-        sellout:'1Rb',
-        market:{
-            address:'/market/alexandria_store',
-            name:'Alexandria Store'
-        },
-        product_link:'/product/details'
-    },
-    {
-        title:'Thinkpad latop original',
-        price:'Rp. 100.000.00',
-        price_old:'Rp. 100.000.00',
-        thumbnail:'/samplelaptop.png',
-        rating_point:'4.6',
-        sellout:'1Rb',
-        market:{
-            address:'/market/alexandria_store',
-            name:'Alexandria Store'
-        },
-        product_link:'/product/details'
-    },
-    {
-        title:'Thinkpad latop original',
-        price:'Rp. 100.000.00',
-        price_old:'Rp. 100.000.00',
-        thumbnail:'/samplelaptop.png',
-        rating_point:'4.6',
-        sellout:'1Rb',
-        market:{
-            address:'/market/alexandria_store',
-            name:'Alexandria Store'
-        },
-        product_link:'/product/details'
-    },
-    {
-        title:'Thinkpad latop original',
-        price:'Rp. 100.000.00',
-        price_old:'Rp. 100.000.00',
-        thumbnail:'/samplelaptop.png',
-        rating_point:'4.6',
-        sellout:'1Rb',
-        market:{
-            address:'/market/alexandria_store',
-            name:'Alexandria Store'
-        },
-        product_link:'/product/details'
-    },
-    {
-        title:'Thinkpad latop original',
-        price:'Rp. 100.000.00',
-        price_old:'Rp. 100.000.00',
-        thumbnail:'/samplelaptop.png',
-        rating_point:'4.6',
-        sellout:'1Rb',
-        market:{
-            address:'/market/alexandria_store',
-            name:'Alexandria Store'
-        },
-        product_link:'/product/details'
-    },
-    {
-        title:'Thinkpad latop original',
-        price:'Rp. 100.000.00',
-        price_old:'Rp. 100.000.00',
-        thumbnail:'/samplelaptop.png',
-        rating_point:'4.6',
-        sellout:'1Rb',
-        market:{
-            address:'/market/alexandria_store',
-            name:'Alexandria Store'
-        },
-        product_link:'/product/details'
-    },
-    {
-        title:'Thinkpad latop original',
-        price:'Rp. 100.000.00',
-        price_old:'Rp. 100.000.00',
-        thumbnail:'/samplelaptop.png',
-        rating_point:'4.6',
-        sellout:'1Rb',
-        market:{
-            address:'/market/alexandria_store',
-            name:'Alexandria Store'
-        },
-        product_link:'/product/details'
-    },
-    {
-        title:'Thinkpad latop original',
-        price:'Rp. 100.000.00',
-        price_old:'Rp. 100.000.00',
-        thumbnail:'/samplelaptop.png',
-        rating_point:'4.6',
-        sellout:'1Rb',
-        market:{
-            address:'/market/alexandria_store',
-            name:'Alexandria Store'
-        },
-        product_link:'/product/details'
-    },
-    {
-        title:'Thinkpad latop original',
-        price:'Rp. 100.000.00',
-        price_old:'Rp. 100.000.00',
-        thumbnail:'/samplelaptop.png',
-        rating_point:'4.6',
-        sellout:'1Rb',
-        market:{
-            address:'/market/alexandria_store',
-            name:'Alexandria Store'
-        },
-        product_link:'/product/details'
-    },
-    {
-        title:'Thinkpad latop original',
-        price:'Rp. 100.000.00',
-        price_old:'Rp. 100.000.00',
-        thumbnail:'/samplelaptop.png',
-        rating_point:'4.6',
-        sellout:'1Rb',
-        market:{
-            address:'/market/alexandria_store',
-            name:'Alexandria Store'
-        },
-        product_link:'/product/details'
+interface Product {
+    id: number;
+    product_name: string;
+    product_price: number;
+    product_price_discount: number;
+    product_detail: string;
+    product_photo: string;
+    product_gallery: object;
+    product_slug: string;
+    product_status: string;
+    seller: {
+        store_name: string;
     }
-];
+}
 
-type Props = {};
+export default function _CardProduct() {
+    const [products, setProducts] = useState<Product[]>([]);
+    const [isLoading, setIsLoading] = useState(false);
+    const [error, setError] = useState<Error
+        | null>(null);
 
-export default function _CardProduct(props: Props) {
+    useEffect(() => {
+        const fetchData = async () => {
+            setIsLoading(true);
+
+            setError(null); // Clear any previous errors
+
+            try {
+                const host = process.env.NEXT_PUBLIC_HOST;
+                const response = await axios.get<Product[]>(`${host}/v1/products/all`);
+                setProducts(response.data.data);
+            } catch (error) {
+                setError(error);
+                console.error('Error fetching products:', error);
+            } finally {
+                setIsLoading(false);
+            }
+        };
+
+        fetchData();
+    }, []); // Empty dependency array to fetch data only once
+
+    if (isLoading) {
+        return <p>Loading products...</p>;
+    }
+
+    if (error) {
+        return <p>Error fetching products: {error.message}</p>;
+    }
+
+
     return (
         <div style={{
-            padding:'20px 0',
-            borderTop:'1px solid',
-            borderBottom:'1px solid',
-            margin:'20px 0'
+            padding: '20px 0',
+            borderTop: '1px solid',
+            borderBottom: '1px solid',
+            margin: '20px 0'
         }}>
             <div style={{
-                display:'flex',
-                fontWeight:'bold',
-                justifyContent:'space-between'
+                display: 'flex',
+                fontWeight: 'bold',
+                justifyContent: 'space-between'
             }}>
                 <div>Barang Populer</div>
                 <div>
@@ -234,24 +78,8 @@ export default function _CardProduct(props: Props) {
                 </div>
             </div>
             <div className="products_container">
-<<<<<<< Updated upstream
-            {
-                dataProducts.map((item,index)=>(
-                    <ProductItems
-                        title={item.title}
-                        price={item.price}
-                        price_old={item.price_old}
-                        thumbnail={item.thumbnail}
-                        sellout={item.sellout}
-                        rating_point={item.rating_point}
-                        market={item.market}
-                        product_link={item.product_link}
-                    />
-                ))
-            }
-=======
                 {products && (
-                    products.map((item: Product, index:number) => (
+                    products.map((item: Product, index: number) => (
                         <_ItemProduct
                             key={item.id}
                             product_name={item.product_name}
@@ -263,12 +91,12 @@ export default function _CardProduct(props: Props) {
                             store_name={item.seller.store_name}
                             product_slug={item.product_slug}
                             location={'Jakarta'}
-                         id={item.id} product_detail={item.product_detail} product_gallery={item.product_gallery} product_status={item.product_status} seller={item.seller}></_ItemProduct>
+                            id={item.id} product_detail={item.product_detail} product_gallery={item.product_gallery}
+                            product_status={item.product_status} seller={item.seller}></_ItemProduct>
                     ))
                 )
                 }
                 {!products && <p>Loading products...</p>}
->>>>>>> Stashed changes
             </div>
         </div>
     );

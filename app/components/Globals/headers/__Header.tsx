@@ -3,12 +3,12 @@ import * as React from 'react';
 import _HeaderButtonDefault from "@/app/components/Globals/headers/header_button_default";
 import _HeaderButtonProfile from "@/app/components/Globals/headers/header_button_profile";
 
-<<<<<<< Updated upstream:app/components/Globals/headers/header.tsx
-export default function(props) {
-=======
-export default function __Header() {
->>>>>>> Stashed changes:app/components/Globals/headers/__Header.tsx
+type Props = {
+    isBannerOf?: boolean
+}
+export default function __Header(props: Props) {
     const [isUserLoggedIn, setIsUserLoggedIn] = React.useState<boolean | null>(null);
+    const {isBannerOf} = props
 
     React.useEffect(() => {
         // Check if there is a 'user' item in localStorage only on the client side
@@ -114,7 +114,7 @@ export default function __Header() {
                     {!isUserLoggedIn ? <_HeaderButtonDefault/> : <_HeaderButtonProfile/>}
                 </div>
             </div>
-            {!props.isBannerOf && (
+            {!isBannerOf && (
                 <div style={{
                     width: '100%',
                     height: '400px',

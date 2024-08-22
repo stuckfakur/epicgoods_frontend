@@ -20,6 +20,19 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
+/* Untuk browser WebKit seperti Chrome, Safari, dan Opera */
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Untuk browser Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
 .fitImage{
 	width:100%;
 	height:100%;
@@ -79,9 +92,167 @@ select{
 .flex_wrap{
 	flex-wrap: wrap;
 }
+.productShowOf{
+	max-width: 300px;
+	min-width: 300px;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+.productShowOf_banner{
+	width: 100%;
+	height: 100%;
+	min-height: 300px;
+	max-height: 300px;
+	background: gray;
+}
+.productShowOf_ShowList{
+	width: 100%;
+	min-height: 64px;
+	max-height: 64px;
+	display: flex;
+	gap: 10px;
+	overflow: auto;
+}
+.productShowOf_ShowList_Item{
+	max-width: 64px;
+	min-width: 64px;
+	cursor: pointer;
+	background: gray;
+}
+
+.filter-component{
+	padding:30px 20px;
+}
+.filter-component .title{
+	font-weight: bold;
+}
+.filter-component .content{
+	padding:20px;
+	border:1px solid gainsboro;
+	flex-direction: column;
+	margin:10px 0;
+	border-radius: 10px;
+	gap: 10px;
+	width: 200px
+}
+.filter-component .content .category ul{
+	padding: 0 15px;
+}
+
+.filter-component .content .category h4{
+	cursor: pointer;
+}
+
+.filter-component .content .category ul li{
+	cursor:pointer;
+}
+.filter-component .content .location div{
+	display: flex;
+	gap: 10px;
+}
+
+.input_radio{
+	width: 18px;
+	height:18px;
+	border-radius: 5px;
+	background: whitesmoke;
+	border-radius: 5px;
+	border:1px solid gainsboro;
+	cursor:pointer;
+}
+
+.radio_parent{
+	min-width: 32px;
+	max-width: 32px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.delete_button{
+	cursor: pointer;
+}
+.delete_button:hover{
+	color:white;
+	font-weight: bold;
+}
+
+.shopIcon{
+	width:16px;
+	height:16px;
+}
+
+.productIcon{
+	min-width: 80px;
+	max-width: 80px;
+	max-height: 80px;
+	min-height: 80px;
+	background:white;
+	border-radius: 10px;
+}
+
+.bold{
+	font-weight: bold;
+}
+
+.cart-counter{
+	padding:2px 10px;
+	background: white;
+	border-radius: 5px;
+}
+
+.cart-counter input{
+ min-width: 32px;
+ width: 32px;
+ text-align: center;
+ padding: 5px;
+ cursor: unset;
+}
+
+.cart-delete-button{
+	width: 40px;
+	height: 40px;
+	padding: 8px;
+	border-radius:3px;
+	cursor: pointer;
+	background:#bfab73;
+}
+.cart-right-box{
+	min-width: 300px;
+	background: #ffe6a2;
+	padding: 20px;
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	gap:10px;
+	justify-content: space-between;
+}
+.button-address{
+	display: flex;
+	gap:10px;
+}
+.button-address button{
+	background: white;
+}
+
+.cart-right-box div button{
+	padding:10px;
+	background: white;
+	color:black;
+	width: 100%;
+}
+
+.cart-root-parent{
+	display: flex;
+	gap:20px;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
 @media screen and (max-width:900px){
 	.containerContent{
 		width: 95%;
+		flex-direction: column;
 	}
 	.centerMenu{
 		display: none;
@@ -89,5 +260,21 @@ select{
 
 	.flex_wrapp{
 		flex-wrap: wrap;
+	}
+	.cart-root-parent{
+		flex-direction: column;
+	}
+	.cart-right-box{
+		width: 100%;
+	}
+	.flex-responsive{
+		flex-direction: column;
+	}
+	.productShowOf{
+		margin-bottom:20px;
+		max-width: 100%;
+	}
+	.productShowOf_banner{
+		max-height:100%;
 	}
 }

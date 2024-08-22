@@ -47,7 +47,7 @@ const styles: { [key: string] : CSSProperties } = {
     model: {
         position: 'fixed',
         bottom: 0,
-        right: 0,
+        left: 0,
         height: '100%'
     },
     container: {

@@ -77,3 +77,38 @@
 .bold{
 	font-weight: bold;
 }
+.details_price{
+	font-size: 20px;
+}
+.navigation_details{
+	border:1px solid gainsboro;
+	border-left: 0;
+	border-right: 0;
+	display: flex;
+	gap: 10px;
+}
+.navigation_details div{
+	padding:10px 0;
+	cursor: pointer;
+}
+
+.navigation_details .active{
+	color:blue;
+	border-bottom:2px solid blue;
+}
+
+.moreButton{
+	font-weight: bold;
+	color:blue;
+	font-size: 14px;
+	cursor: pointer;
+}
+
+.follow_button{
+	backrground:white;
+	border:1px solid blue;
+	color:blue;
+	border-radius: 10px;
+	text-align: center;
+}
+

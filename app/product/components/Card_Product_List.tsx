@@ -209,20 +209,16 @@ export default function _CardProduct(props: Props) {
     return (
         <div style={{
             padding:'20px 0',
-            borderTop:'1px solid',
-            borderBottom:'1px solid',
-            margin:'20px 0'
         }}>
-            <div style={{
-                display:'flex',
-                fontWeight:'bold',
-                justifyContent:'space-between'
-            }}>
-                <div>Barang Populer</div>
-                <div>
-                    <a href="/product">
-                        Lihat Semua Barang >>
-                    </a>
+            <div className="flex font-bold justify-between items-center">
+                <div>Menampilkan {dataProducts.length} Barang</div>
+                <div className="flex" style={{alignItems:'center',gap:'10px'}}>
+                    <div>Urutkan:</div>
+                    <div>
+                        <select>
+                            <option>Sesuaikan</option>
+                        </select>
+                    </div>
                 </div>
             </div>
             <div className="products_container">
@@ -240,6 +236,11 @@ export default function _CardProduct(props: Props) {
                     />
                 ))
             }
+            </div>
+            <div className="p-[20px] text-center">
+                <button style={{
+                    background:'whitesmoke'
+                }} className="p-[10px]">Muat Lebih Banyak</button>
             </div>
         </div>
     );

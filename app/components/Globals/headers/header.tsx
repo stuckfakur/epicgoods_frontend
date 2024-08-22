@@ -3,7 +3,7 @@ import * as React from 'react';
 import _HeaderButtonDefault from "@/app/components/Globals/headers/header_button_default";
 import _HeaderButtonProfile from "@/app/components/Globals/headers/header_button_profile";
 
-export default function Header() {
+export default function(props) {
     const [isUserLoggedIn, setIsUserLoggedIn] = React.useState<boolean | null>(null);
 
     React.useEffect(() => {
@@ -110,22 +110,24 @@ export default function Header() {
                     {!isUserLoggedIn ? <_HeaderButtonDefault/> : <_HeaderButtonProfile/>}
                 </div>
             </div>
-            <div style={{
-                width: '100%',
-                height: '400px',
-                position: 'relative'
-            }}>
-                <img src="/banner.png" className="fitImage"/>
+            {!props.isBannerOf && (
                 <div style={{
-                    background: 'black',
-                    opacity: '.6',
-                    position: 'absolute',
-                    top: 0, left: 0,
                     width: '100%',
-                    height: '100%',
-                    zIndex: 1
-                }}></div>
-            </div>
+                    height: '400px',
+                    position: 'relative'
+                }}>
+                    <img src="/banner.png" className="fitImage"/>
+                    <div style={{
+                        background: 'black',
+                        opacity: '.6',
+                        position: 'absolute',
+                        top: 0, left: 0,
+                        width: '100%',
+                        height: '100%',
+                        zIndex: 1
+                    }}></div>
+                </div>
+            )}
         </header>
     );
 }

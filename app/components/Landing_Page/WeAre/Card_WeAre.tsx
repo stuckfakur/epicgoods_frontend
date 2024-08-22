@@ -3,6 +3,21 @@ import * as React from 'react';
 
 type Props = {};
 
+const whyWeAre = [
+    {
+        background_image:'/customerservice.jpg',
+        label:'Customer Service Yang Competen'
+    },
+    {
+        background_image:'/customerservice.jpg',
+        label:'Customer Service Yang Competen'
+    },
+    {
+        background_image:'/customerservice.jpg',
+        label:'Customer Service Yang Competen'
+    }
+];
+
 export default function _CardWeAre(props: Props) {
     return (
         <div style={{margin:'20px 0', paddingBottom:'30px',borderBottom:'1px solid'}}>
@@ -11,13 +26,13 @@ export default function _CardWeAre(props: Props) {
                 display:'flex',
                 gap:'10px',
             }} className="flex_wrapp">
-                {
-                    props.whyWeAre.map((item,index)=>(
+                {whyWeAre &&
+                    whyWeAre.map((item,index)=>(
                         <div style={{
                             width:'100%',
                             height:'300px',
                             position:'relative'
-                        }}>
+                        }} key={index}>
                             <div style={{
                                 width:'100%',
                                 height:'100%'

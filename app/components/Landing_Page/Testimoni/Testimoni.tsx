@@ -3,6 +3,27 @@ import * as React from 'react';
 
 type Props = {};
 
+const testimonials = [
+    {
+        comment:'Terimakasih Banyakkk, sangatt membantu',
+        profile_picture:'/profile.jpg',
+        job:'Penjual',
+        name:'Jeremy'
+    },
+    {
+        comment:'Terimakasih Banyakkk, sangatt membantu',
+        profile_picture:'/profile.jpg',
+        job:'Penjual',
+        name:'Jeremy'
+    },
+    {
+        comment:'Terimakasih Banyakkk, sangatt membantu',
+        profile_picture:'/profile.jpg',
+        job:'Penjual',
+        name:'Jeremy'
+    }
+];
+
 export default function _Testimoni(props: Props) {
     return (
         <div style={{
@@ -30,8 +51,8 @@ export default function _Testimoni(props: Props) {
                 overflow:'auto',
                 paddingBottom:'20px',zIndex:1
             }} className="containerContent">
-                {
-                    props.testi.map((item,value)=>(
+                {testimonials &&
+                    testimonials.map((item,value)=>(
                         <div style={{
                             padding:'20px',
                             background:'white',
@@ -40,7 +61,7 @@ export default function _Testimoni(props: Props) {
                             flexDirection:'column',
                             gap:'10px',
                             width:'100%'
-                        }}>
+                        }} key={value}>
                             <div style={{fontSize:'18px'}}>
                                 "{item.comment}"
                             </div>

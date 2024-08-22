@@ -36,11 +36,13 @@ export default function _HeaderButtonProfile() {
                 localStorage.removeItem('token')
                 localStorage.removeItem('user')
                 localStorage.removeItem('refresh_token')
+                toast.success("Youre been logout successfully")
+                Router.push('/auth/login')
             })
             .catch((err) => {
                 console.log(err)
+                toast.error("Something wrong")
             })
-        Router.push('/auth/login')
 
     }
 

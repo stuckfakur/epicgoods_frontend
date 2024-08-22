@@ -36,7 +36,7 @@ export default function _RegisterFormOrigin(props: Props) {
             toast.success(response.data.message)
             console.log('Response:', response.data)
             Router.push("/auth/login")
-        }catch (e){
+        }catch (e : any){
             toast.error(e.response.data.error.message)
             console.error('Error:', e)
         }
@@ -94,7 +94,15 @@ export default function _RegisterFormOrigin(props: Props) {
     );
 };
 
-const styles: { [key: String]: CSSProperties } = {
+interface Styles {
+    background: CSSProperties
+    model: CSSProperties
+    container: CSSProperties
+    input: CSSProperties
+    submitButton: CSSProperties
+}
+
+const styles: Styles = {
     background: {
         position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', background: '#ffe6a2',
         display: 'flex', justifyContent: 'flex-start', alignItems: 'center', flexDirection: 'column',

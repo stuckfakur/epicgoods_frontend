@@ -1,9 +1,8 @@
 "use client"
 import React, { useState } from 'react';
 import '../style.css';
-import Header from '../components/Globals/headers/header.tsx';
-import Footer from '../components/Globals/footers/footer.tsx';
-import Counter from '../components/Cart/Counter';
+import __Header from "@/app/components/Globals/headers/__Header";
+import __Footer from "@/app/components/Globals/footers/footer";
 
 const cart_items = [
 	{
@@ -66,8 +65,8 @@ export default function CartPage() {
 
 	return (
 		<>
-			<Header isBannerOf={true}/>
-			<content>
+			<__Header/>
+			<div>
 				<div className="content">
 					<div className="containerContent">
 						<div style={{
@@ -115,7 +114,7 @@ export default function CartPage() {
 															minHeight:'80px',
 														}}>
 															<div className="flex justify-between">
-																<div><a href={item.product.address}>{item.product.name}</a></div>
+																<div><a href={item.shop.address}>{item.product.name}</a></div>
 																<div className="bold">
 																	{item.product.price}
 																</div>
@@ -125,7 +124,7 @@ export default function CartPage() {
 																	<div className="cart-delete-button">
 																		<img src='/delete.png' className="fitImage"/>
 																	</div>
-																	<Counter/>
+																	{/*<Counter/>*/}
 																</div>
 															</div>
 														</div>
@@ -171,8 +170,8 @@ export default function CartPage() {
 						</div>
 					</div>
 				</div>
-			</content>
-			<Footer/>
+			</div>
+			<__Footer/>
 		</>
 	)
 }

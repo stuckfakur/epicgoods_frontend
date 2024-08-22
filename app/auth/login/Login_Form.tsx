@@ -38,7 +38,7 @@ export default function _LoginForm(props: Props) {
             saveRefreshTokenToLocalStorage(token.refresh_token)
             console.log('Response:', response.data)
             Router.push("/")
-        }catch (e){
+        }catch (e: any){
             toast.error(e.response.data.error.message)
             console.error('Error:', e)
         }
@@ -51,7 +51,7 @@ export default function _LoginForm(props: Props) {
                     <input
                         placeholder="e.g johndoe@gmail.com"
                         type="email"
-                        style={styles.input}
+                        style={styles.input as CSSProperties}
                         name="email"
                         onChange={handleChange}
                         value={formData.email}
@@ -64,7 +64,7 @@ export default function _LoginForm(props: Props) {
                     <input
                         placeholder="**************"
                         type="password"
-                        style={styles.input}
+                        style={styles.input as CSSProperties}
                         name="password"
                         onChange={handleChange}
                         value={formData.password}
@@ -80,8 +80,15 @@ export default function _LoginForm(props: Props) {
     );
 };
 
+interface Styles {
+    input: CSSProperties,
+    submitButton: CSSProperties,
+    background: CSSProperties,
+    model: CSSProperties,
+    container: CSSProperties
+}
 
-const styles: { [key: String]: CSSProperties } = {
+const styles: Styles = {
     background: {
         position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', background: '#ffe6a2',
         display: 'flex', justifyContent: 'flex-start', alignItems: 'center', flexDirection: 'column',

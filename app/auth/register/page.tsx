@@ -48,8 +48,15 @@ export default function Page(props: Props) {
         ;
 };
 
+interface Styles {
+    background: CSSProperties;
+    model: CSSProperties;
+    container: CSSProperties;
+    input: CSSProperties;
+    submitButton: CSSProperties;
+}
 
-const styles: { [key: String]: CSSProperties } = {
+const styles: Styles = {
     background: {
         position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', background: '#ffe6a2',
         display: 'flex', justifyContent: 'flex-start', alignItems: 'center', flexDirection: 'column',

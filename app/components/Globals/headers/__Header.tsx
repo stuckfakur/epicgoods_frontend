@@ -3,7 +3,11 @@ import * as React from 'react';
 import _HeaderButtonDefault from "@/app/components/Globals/headers/header_button_default";
 import _HeaderButtonProfile from "@/app/components/Globals/headers/header_button_profile";
 
+<<<<<<< Updated upstream:app/components/Globals/headers/header.tsx
 export default function(props) {
+=======
+export default function __Header() {
+>>>>>>> Stashed changes:app/components/Globals/headers/__Header.tsx
     const [isUserLoggedIn, setIsUserLoggedIn] = React.useState<boolean | null>(null);
 
     React.useEffect(() => {
